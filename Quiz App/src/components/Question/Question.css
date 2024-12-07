@@ -1,0 +1,85 @@
+.question {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.singleQuestion {
+  width: 95%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid grey;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.singleOption {
+  width: 46%;
+  height: 50px;
+  padding: 15px 20px;
+  margin: 10px;
+  box-shadow: 0 0 2px black;
+  color: black;
+}
+
+@media (max-width: 614px) {
+  .singleOption {
+    width: 100%;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: row; /* Keep buttons side by side on large screens */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 20px; /* Add space between the buttons */
+  width: 100%;
+  margin-top: 20px; /* Add top margin for spacing */
+}
+
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column-reverse; /* Reverse the order of buttons when stacked */
+    gap: 15px; /* Add space between the stacked buttons */
+    align-items: center; /* Center buttons horizontally */
+  }
+
+  .responsiveButton {
+    width: 80%; /* Buttons take 80% of the screen width on small screens */
+    max-width: 350px; /* Optional: Restrict the button width */
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsiveButton {
+    width: 90%; /* Buttons take 90% of the width on very small screens */
+    padding: 8px 16px; /* Smaller padding for very small screens */
+  }
+}
+
+.select {
+  background-color: rgb(7, 207, 0);
+  color: white;
+  box-shadow: 0 0 1px black;
+}
+
+.wrong {
+  background-color: rgb(233, 0, 0);
+  color: white;
+  box-shadow: 0 0 1px black;
+}
